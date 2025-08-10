@@ -59,7 +59,7 @@ print(f"Mean single-tree accuracy over {n_splits} subset-trained trees: {mean_tr
 from scipy.stats import mode
 y_vote = mode(all_test_preds, axis=0, keepdims=False).mode  # shape: (n_test,)
 ensemble_acc_score = accuracy_score(y_pred=y_vote, y_true=y_test)
-print(f"rf_acc_score = {ensemble_acc_score:.4f}")
+print(f"ensemble acc_score = {ensemble_acc_score:.4f}")
 
 n_trees = 1000
 import random

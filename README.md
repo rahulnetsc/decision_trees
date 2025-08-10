@@ -6,3 +6,13 @@ This demo trains and visualizes a decision tree classifier on the Iris dataset u
 
 ```bash
 python -m src.demos.iris
+
+# 🌳 Random forests Demo (Moons Dataset)
+
+This demo trains and visualizes a decision tree classifier on the Moons dataset using scikit-learn. Then it
+trains an ensemble model approximating random forests to improve its predictive performane
+
+## 🚀 Run the Demo
+
+```bash
+python -m src.demos.random_forest_make_moons
