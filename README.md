@@ -18,10 +18,18 @@ trains an ensemble model approximating random forests to improve its predictive 
 python -m src.demos.random_forest_make_moons
 ```
 
-# 🌳🌳 Bagging Classifier(Moons dataset)
+# 🌳 Bagging Classifier(Moons dataset)
 
 This demo trains a Bagging classifier on Moons dataset and plots its decision boundary
 
 ```bash
 python -m src.demos.bagging_classifier
+```
+
+# 🌳🌳 Random Forest Classifier(Moons dataset)
+
+This demo trains a Random Forest classifier on Moons dataset and plots its decision boundary
+
+```bash
+python -m src.demos.random_forest_classifier 
 ```

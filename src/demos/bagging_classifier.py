@@ -35,13 +35,13 @@ class Bagging_Classifier():
     
     def predict(self,X):
         if self.clf is None:
-            raise RuntimeError(f"Run fit method before predict")
+            raise RuntimeError(f"Run fit() method before predict()")
         return self.clf.predict(X)
     
     def score(self,):
         if self.clf is None or self.splits_ is None:
-            raise RuntimeError(f"Run fit method before predict")
-        X_train, X_test, y_train, y_test = self.splits_
+            raise RuntimeError(f"Run fit() method before score()")
+        _, X_test, _, y_test = self.splits_
         return accuracy_score(y_true=y_test, y_pred=self.clf.predict(X_test))
     
     def plot_decision_boundary(self, X=None, y=None, clf=None, padding = 0.5, step=0.02):
