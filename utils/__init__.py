@@ -1,1 +1,1 @@
-from gen_moons import moons_dataset
+from utils.gen_moons import moons_dataset
