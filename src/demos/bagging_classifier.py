@@ -69,7 +69,7 @@ class Bagging_Classifier():
         plt.xlabel("x1")
         plt.ylabel("x2")
         plt.tight_layout()
-        plt.savefig('figs.bagging_classifier.png')
+        plt.savefig('figs/bagging_classifier.png')
         plt.show()
         
 
