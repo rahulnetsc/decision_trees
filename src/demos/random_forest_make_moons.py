@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 plt.figure()
 plot_tree(opt_tree,rounded=True,filled=True, class_names=["0", "1"], fontsize= 10)
 plt.tight_layout()
-plt.savefig('figs.optimized_tree.png')
+plt.savefig('figs/optimized_tree.png')
 plt.show()
 
 base_tree = DecisionTreeClassifier(**opt_tree.get_params())

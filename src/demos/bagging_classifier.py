@@ -26,7 +26,7 @@ class Bagging_Classifier():
         self.splits_ = (X_train, X_test, y_train, y_test)
 
         base = self.base_estimator or DecisionTreeClassifier(random_state=self.state)
-        self.clf = BaggingClassifier(base, max_samples= self.max_samples, 
+        self.clf = BaggingClassifier(estimator=base, max_samples= self.max_samples, 
                                 n_estimators= 500, random_state= self.state,n_jobs=-1)
         self.clf.fit(X=X_train,y=y_train)
         preds = self.clf.predict(X_test)
@@ -44,7 +44,7 @@ class Bagging_Classifier():
         X_train, X_test, y_train, y_test = self.splits_
         return accuracy_score(y_true=y_test, y_pred=self.clf.predict(X_test))
     
-    def plot_decision_boundary(self, X=None, y=None, clf=None, padding = 0.5, step=0.2):
+    def plot_decision_boundary(self, X=None, y=None, clf=None, padding = 0.5, step=0.02):
         ''' Plot decision boundary of classifier for X,y'''
         if clf is None:
             if self.clf is None:
@@ -72,11 +72,10 @@ class Bagging_Classifier():
         plt.savefig('figs/bagging_classifier.png')
         plt.show()
         
-
-
-bag_clf = Bagging_Classifier(n_samples= 1000, noise= 0.2)
-bag_clf.fit()
-bag_clf.plot_decision_boundary()
+if __name__ == '__main__':
+    bag_clf = Bagging_Classifier(n_samples= 1000, noise= 0.2)
+    bag_clf.fit()
+    bag_clf.plot_decision_boundary()
 
 
 
