@@ -22,13 +22,17 @@ python -m src.demos.random_forest_make_moons
 
 This demo trains a Bagging classifier on Moons dataset and plots its decision boundary
 
+## 🚀 Run the Demo
+
 ```bash
 python -m src.demos.bagging_classifier
 ```
 
-# 🌳🌳 Random Forest Classifier(Moons dataset)
+# 🌳 Random Forest Classifier(Moons dataset)
 
 This demo trains a Random Forest classifier on Moons dataset and plots its decision boundary
+
+## 🚀 Run the Demo
 
 ```bash
 python -m src.demos.random_forest_classifier 
