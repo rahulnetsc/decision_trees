@@ -1,49 +1,35 @@
-Demos for various decision tree algorithms
+# 🌳 Decision Trees — Demos (Iris & Moons)
 
-#  Custom AdaBoost (Moons Dataset)
-A minimal, from-scratch implementation of **AdaBoost (SAMME)** using decision trees as weak learners.  
-Trains on the classic two-moons dataset and plots the decision boundary.
+Small, focused demos of classical tree methods in scikit‑learn, plus a **from‑scratch AdaBoost (SAMME)** that trains on the two‑moons dataset and saves a decision boundary plot.
 
-```bash
- python -m src.demos.adaboost
-```
+![Decision Boundary](figs/decision_boundary.png)
 
-# 🌳 Decision Trees Demo (Iris Dataset)
-
-This demo trains and visualizes a decision tree classifier on the Iris dataset using scikit-learn.
-
-## 🚀 Run the Demo
+## 🚀 Quickstart
 
 ```bash
+# Create env & install
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# Run any demo
 python -m src.demos.iris
-```
-# 🌳 Random forests Demo (Moons Dataset)
-
-This demo trains and visualizes a decision tree classifier on the Moons dataset using scikit-learn. Then it
-trains an ensemble model approximating random forests to improve its predictive performane
-
-## 🚀 Run the Demo
-
-```bash
 python -m src.demos.random_forest_make_moons
-```
-
-# 🌳 Bagging Classifier(Moons dataset)
-
-This demo trains a Bagging classifier on Moons dataset and plots its decision boundary
-
-## 🚀 Run the Demo
-
-```bash
 python -m src.demos.bagging_classifier
+python -m src.demos.random_forest_classifier
+python -m src.demos.adaboost     # custom AdaBoost (SAMME)
 ```
 
-# 🌳 Random Forest Classifier(Moons dataset)
-
-This demo trains a Random Forest classifier on Moons dataset and plots its decision boundary
-
-## 🚀 Run the Demo
-
-```bash
-python -m src.demos.random_forest_classifier 
-```
+# Project structure
+decision_trees/
+├─ src/
+│  └─ demos/
+│     ├─ iris.py
+│     ├─ random_forest_make_moons.py
+│     ├─ random_forest_classifier.py
+│     ├─ bagging_classifier.py
+│     └─ adaboost.py    # custom AdaBoost (SAMME)
+├─ utils/
+│  └─ __init__.py (e.g., moons_dataset)
+├─ figs/                # saved plots
+├─ requirements.txt
+└─ README.md
