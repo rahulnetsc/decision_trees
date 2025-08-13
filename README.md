@@ -17,7 +17,6 @@ python -m src.demos.random_forest_make_moons
 python -m src.demos.bagging_classifier
 python -m src.demos.random_forest_classifier
 python -m src.demos.adaboost     # custom AdaBoost (SAMME)
-```
 
 # Project structure
 decision_trees/
