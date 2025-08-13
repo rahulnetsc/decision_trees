@@ -1,3 +1,13 @@
+Demos for various decision tree algorithms
+
+#  Custom AdaBoost (Moons Dataset)
+A minimal, from-scratch implementation of **AdaBoost (SAMME)** using decision trees as weak learners.  
+Trains on the classic two-moons dataset and plots the decision boundary.
+
+```bash
+ python -m src.demos.adaboost
+```
+
 # 🌳 Decision Trees Demo (Iris Dataset)
 
 This demo trains and visualizes a decision tree classifier on the Iris dataset using scikit-learn.
